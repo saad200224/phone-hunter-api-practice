@@ -46,6 +46,8 @@ const displayPhones = (phones) =>{
     phoneContainer.appendChild(phoneCard);
     });
 
+    toggleLoadingSpinner(false);
+
 };
 
 const handleSearch = () =>{
@@ -61,6 +63,9 @@ const toggleLoadingSpinner = (isLoading) =>{
     const loadingSpinner = document.getElementById('loading-spinner');
     if (isLoading){
         loadingSpinner.classList.remove('hidden');
+    }
+    else{
+        loadingSpinner.classList.add('hidden');
     }
 
 };
