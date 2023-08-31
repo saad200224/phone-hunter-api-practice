@@ -49,9 +49,18 @@ const displayPhones = (phones) =>{
 };
 
 const handleSearch = () =>{
+    toggleLoadingSpinner(true);
     const searchFiled = document.getElementById('search-field');
     const searchText = searchFiled.value;
     // console.log(searchText);
     loadPhone(searchText);
+
+};
+
+const toggleLoadingSpinner = (isLoading) =>{
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if (isLoading){
+        loadingSpinner.classList.remove('hidden');
+    }
 
 };
